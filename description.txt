@@ -1,0 +1,7 @@
+Robert Matijevic
+
+Jag har valt att lägga till egna FaultContracts för 3 tillfällen, 
+ifall det är fel lösenord vid authentication, 
+ifall det finns ingen data i databasen som matchar ditt sök ord eller om du vill ha all data från en specifik data tabell,
+ifall det gick eller inte gick lägga till eller ta bort något från databasen.
+Jag har valt att andvända wsHttpBinding och netTcpBinding för dem funkar för många olika sorters klienter.
