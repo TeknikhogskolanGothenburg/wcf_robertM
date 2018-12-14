@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ServiceModel;
 using Context;
 
 namespace Service
@@ -20,7 +19,11 @@ namespace Service
 			}
 			catch (Exception)
 			{
-				return false;
+				var ex = new ADContract
+				{
+					Info = "Couldn't add customer"
+				};
+				throw new FaultException<ADContract>(ex);
 			}
 			return true;
 		}
@@ -34,14 +37,27 @@ namespace Service
 			}
 			catch (Exception)
 			{
-				return false;
+				var ex = new ADContract
+				{
+					Info = "Couldn't delete customer"
+				};
+				throw new FaultException<ADContract>(ex);
 			}
 			return true;
 		}
 
 		public List<Customer> GetAllCustomers()
 		{
-			return _context.Customers.ToList();
+			var customes = _context.Customers.ToList();
+			if(customes.Count <= 0)
+			{
+				var ex = new NoDataAvaliable
+				{
+					Info = "No customers in the database"
+				};
+				throw new FaultException<NoDataAvaliable>(ex);
+			}
+			return customes;
 		}
 	}
 }

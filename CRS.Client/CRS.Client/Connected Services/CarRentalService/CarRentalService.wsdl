@@ -134,6 +134,25 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_GetAllCars_NoDataAvaliableFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_GetCarById_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -154,6 +173,25 @@
     </wsp:ExactlyOne>
   </wsp:Policy>
   <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_GetCarById_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_GetCarById_NoDataAvaliableFault_Fault">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -210,6 +248,44 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_GetCarByRegnum_AccessDeniedFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_GetCarByRegnum_NoDataAvaliableFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_AddCar_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -226,6 +302,21 @@
     </wsp:ExactlyOne>
   </wsp:Policy>
   <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_AddCar_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_AddCar_NoDataAvaliableFault_Fault">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -272,6 +363,38 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_DeleteCar_AccessDeniedFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_DeleteCar_NoDataAvaliableFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_GetAllCustomers_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -292,6 +415,25 @@
     </wsp:ExactlyOne>
   </wsp:Policy>
   <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_GetAllCustomers_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_GetAllCustomers_NoDataAvaliableFault_Fault">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -348,6 +490,25 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_AddCustomer_ADContractFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_DeleteCustomer_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -368,6 +529,25 @@
     </wsp:ExactlyOne>
   </wsp:Policy>
   <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_DeleteCustomer_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_DeleteCustomer_ADContractFault_Fault">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -424,6 +604,25 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_GetAllReservations_NoDataAvaliableFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_GetAvaibleCars_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -444,6 +643,25 @@
     </wsp:ExactlyOne>
   </wsp:Policy>
   <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_GetAvaibleCars_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_GetAvaibleCars_NoDataAvaliableFault_Fault">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -500,6 +718,25 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_AddReservation_ADContractFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_DeleteReservation_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -520,6 +757,25 @@
     </wsp:ExactlyOne>
   </wsp:Policy>
   <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_DeleteReservation_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_DeleteReservation_ADContractFault_Fault">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -576,6 +832,25 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICarRentalService_FinishReservation_ADContractFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsp:Policy wsu:Id="NetTcpBinding_ICarRentalService_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -608,9 +883,12 @@
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:4040/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:4040/?xsd=xsd3" namespace="http://audhumbla.xyz/FaultContracts/NoDataAvaliable" />
       <xsd:import schemaLocation="http://localhost:4040/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:4040/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Context" />
-      <xsd:import schemaLocation="http://localhost:4040/?xsd=xsd3" namespace="http://audhumbla.xyz/Car" />
+      <xsd:import schemaLocation="http://localhost:4040/?xsd=xsd4" namespace="http://audhumbla.xyz/DataContracts/Car" />
+      <xsd:import schemaLocation="http://localhost:4040/?xsd=xsd5" namespace="http://audhumbla.xyz/FaultContracts/AccessDenied" />
+      <xsd:import schemaLocation="http://localhost:4040/?xsd=xsd6" namespace="http://audhumbla.xyz/FaultContracts/ADContract" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ICarRentalService_GetAllCars_InputMessage">
@@ -619,17 +897,29 @@
   <wsdl:message name="ICarRentalService_GetAllCars_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllCarsResponse" />
   </wsdl:message>
+  <wsdl:message name="ICarRentalService_GetAllCars_NoDataAvaliableFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://audhumbla.xyz/FaultContracts/NoDataAvaliable" name="detail" element="q1:NoDataAvaliable" />
+  </wsdl:message>
   <wsdl:message name="ICarRentalService_GetCarById_InputMessage">
     <wsdl:part name="parameters" element="tns:GetCarById" />
   </wsdl:message>
   <wsdl:message name="ICarRentalService_GetCarById_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCarByIdResponse" />
   </wsdl:message>
+  <wsdl:message name="ICarRentalService_GetCarById_NoDataAvaliableFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://audhumbla.xyz/FaultContracts/NoDataAvaliable" name="detail" element="q2:NoDataAvaliable" />
+  </wsdl:message>
   <wsdl:message name="CarRequest">
-    <wsdl:part xmlns:q1="http://audhumbla.xyz/Car" name="parameters" element="q1:CarRequestObject" />
+    <wsdl:part xmlns:q3="http://audhumbla.xyz/DataContracts/Car" name="parameters" element="q3:CarRequestObject" />
   </wsdl:message>
   <wsdl:message name="CarResult">
-    <wsdl:part xmlns:q2="http://audhumbla.xyz/Car" name="parameters" element="q2:CarInfoObject" />
+    <wsdl:part xmlns:q4="http://audhumbla.xyz/DataContracts/Car" name="parameters" element="q4:CarInfoObject" />
+  </wsdl:message>
+  <wsdl:message name="ICarRentalService_GetCarByRegnum_AccessDeniedFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://audhumbla.xyz/FaultContracts/AccessDenied" name="detail" element="q5:AccessDenied" />
+  </wsdl:message>
+  <wsdl:message name="ICarRentalService_GetCarByRegnum_NoDataAvaliableFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://audhumbla.xyz/FaultContracts/NoDataAvaliable" name="detail" element="q6:NoDataAvaliable" />
   </wsdl:message>
   <wsdl:message name="ICarRentalService_AddCar_InputMessage">
     <wsdl:part name="parameters" element="tns:AddCar" />
@@ -637,11 +927,20 @@
   <wsdl:message name="ICarRentalService_AddCar_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddCarResponse" />
   </wsdl:message>
+  <wsdl:message name="ICarRentalService_AddCar_NoDataAvaliableFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://audhumbla.xyz/FaultContracts/NoDataAvaliable" name="detail" element="q7:NoDataAvaliable" />
+  </wsdl:message>
   <wsdl:message name="ICarRentalService_DeleteCar_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteCar" />
   </wsdl:message>
   <wsdl:message name="ICarRentalService_DeleteCar_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarRentalService_DeleteCar_AccessDeniedFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://audhumbla.xyz/FaultContracts/AccessDenied" name="detail" element="q8:AccessDenied" />
+  </wsdl:message>
+  <wsdl:message name="ICarRentalService_DeleteCar_NoDataAvaliableFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://audhumbla.xyz/FaultContracts/NoDataAvaliable" name="detail" element="q9:NoDataAvaliable" />
   </wsdl:message>
   <wsdl:message name="ICarRentalService_GetAllCustomers_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllCustomers" />
@@ -649,11 +948,17 @@
   <wsdl:message name="ICarRentalService_GetAllCustomers_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllCustomersResponse" />
   </wsdl:message>
+  <wsdl:message name="ICarRentalService_GetAllCustomers_NoDataAvaliableFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://audhumbla.xyz/FaultContracts/NoDataAvaliable" name="detail" element="q10:NoDataAvaliable" />
+  </wsdl:message>
   <wsdl:message name="ICarRentalService_AddCustomer_InputMessage">
     <wsdl:part name="parameters" element="tns:AddCustomer" />
   </wsdl:message>
   <wsdl:message name="ICarRentalService_AddCustomer_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarRentalService_AddCustomer_ADContractFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://audhumbla.xyz/FaultContracts/ADContract" name="detail" element="q11:ADContract" />
   </wsdl:message>
   <wsdl:message name="ICarRentalService_DeleteCustomer_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteCustomer" />
@@ -661,11 +966,17 @@
   <wsdl:message name="ICarRentalService_DeleteCustomer_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteCustomerResponse" />
   </wsdl:message>
+  <wsdl:message name="ICarRentalService_DeleteCustomer_ADContractFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://audhumbla.xyz/FaultContracts/ADContract" name="detail" element="q12:ADContract" />
+  </wsdl:message>
   <wsdl:message name="ICarRentalService_GetAllReservations_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllReservations" />
   </wsdl:message>
   <wsdl:message name="ICarRentalService_GetAllReservations_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllReservationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarRentalService_GetAllReservations_NoDataAvaliableFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://audhumbla.xyz/FaultContracts/NoDataAvaliable" name="detail" element="q13:NoDataAvaliable" />
   </wsdl:message>
   <wsdl:message name="ICarRentalService_GetAvaibleCars_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAvaibleCars" />
@@ -673,11 +984,17 @@
   <wsdl:message name="ICarRentalService_GetAvaibleCars_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAvaibleCarsResponse" />
   </wsdl:message>
+  <wsdl:message name="ICarRentalService_GetAvaibleCars_NoDataAvaliableFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://audhumbla.xyz/FaultContracts/NoDataAvaliable" name="detail" element="q14:NoDataAvaliable" />
+  </wsdl:message>
   <wsdl:message name="ICarRentalService_AddReservation_InputMessage">
     <wsdl:part name="parameters" element="tns:AddReservation" />
   </wsdl:message>
   <wsdl:message name="ICarRentalService_AddReservation_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddReservationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarRentalService_AddReservation_ADContractFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://audhumbla.xyz/FaultContracts/ADContract" name="detail" element="q15:ADContract" />
   </wsdl:message>
   <wsdl:message name="ICarRentalService_DeleteReservation_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteReservation" />
@@ -685,64 +1002,85 @@
   <wsdl:message name="ICarRentalService_DeleteReservation_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteReservationResponse" />
   </wsdl:message>
+  <wsdl:message name="ICarRentalService_DeleteReservation_ADContractFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://audhumbla.xyz/FaultContracts/ADContract" name="detail" element="q16:ADContract" />
+  </wsdl:message>
   <wsdl:message name="ICarRentalService_FinishReservation_InputMessage">
     <wsdl:part name="parameters" element="tns:FinishReservation" />
   </wsdl:message>
   <wsdl:message name="ICarRentalService_FinishReservation_OutputMessage">
     <wsdl:part name="parameters" element="tns:FinishReservationResponse" />
   </wsdl:message>
+  <wsdl:message name="ICarRentalService_FinishReservation_ADContractFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://audhumbla.xyz/FaultContracts/ADContract" name="detail" element="q17:ADContract" />
+  </wsdl:message>
   <wsdl:portType name="ICarRentalService">
     <wsdl:operation name="GetAllCars">
       <wsdl:input wsaw:Action="http://tempuri.org/ICarRentalService/GetAllCars" message="tns:ICarRentalService_GetAllCars_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICarRentalService/GetAllCarsResponse" message="tns:ICarRentalService_GetAllCars_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICarRentalService/GetAllCarsNoDataAvaliableFault" name="NoDataAvaliableFault" message="tns:ICarRentalService_GetAllCars_NoDataAvaliableFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetCarById">
       <wsdl:input wsaw:Action="http://tempuri.org/ICarRentalService/GetCarById" message="tns:ICarRentalService_GetCarById_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICarRentalService/GetCarByIdResponse" message="tns:ICarRentalService_GetCarById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICarRentalService/GetCarByIdNoDataAvaliableFault" name="NoDataAvaliableFault" message="tns:ICarRentalService_GetCarById_NoDataAvaliableFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetCarByRegnum">
       <wsdl:input wsaw:Action="http://tempuri.org/ICarRentalService/GetCarByRegnum" name="CarRequest" message="tns:CarRequest" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICarRentalService/GetCarByRegnumResponse" name="CarResult" message="tns:CarResult" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICarRentalService/GetCarByRegnumAccessDeniedFault" name="AccessDeniedFault" message="tns:ICarRentalService_GetCarByRegnum_AccessDeniedFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICarRentalService/GetCarByRegnumNoDataAvaliableFault" name="NoDataAvaliableFault" message="tns:ICarRentalService_GetCarByRegnum_NoDataAvaliableFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddCar">
       <wsdl:input wsaw:Action="http://tempuri.org/ICarRentalService/AddCar" message="tns:ICarRentalService_AddCar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICarRentalService/AddCarResponse" message="tns:ICarRentalService_AddCar_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICarRentalService/AddCarNoDataAvaliableFault" name="NoDataAvaliableFault" message="tns:ICarRentalService_AddCar_NoDataAvaliableFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="DeleteCar">
       <wsdl:input wsaw:Action="http://tempuri.org/ICarRentalService/DeleteCar" message="tns:ICarRentalService_DeleteCar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICarRentalService/DeleteCarResponse" message="tns:ICarRentalService_DeleteCar_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICarRentalService/DeleteCarAccessDeniedFault" name="AccessDeniedFault" message="tns:ICarRentalService_DeleteCar_AccessDeniedFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICarRentalService/DeleteCarNoDataAvaliableFault" name="NoDataAvaliableFault" message="tns:ICarRentalService_DeleteCar_NoDataAvaliableFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllCustomers">
       <wsdl:input wsaw:Action="http://tempuri.org/ICarRentalService/GetAllCustomers" message="tns:ICarRentalService_GetAllCustomers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICarRentalService/GetAllCustomersResponse" message="tns:ICarRentalService_GetAllCustomers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICarRentalService/GetAllCustomersNoDataAvaliableFault" name="NoDataAvaliableFault" message="tns:ICarRentalService_GetAllCustomers_NoDataAvaliableFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddCustomer">
       <wsdl:input wsaw:Action="http://tempuri.org/ICarRentalService/AddCustomer" message="tns:ICarRentalService_AddCustomer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICarRentalService/AddCustomerResponse" message="tns:ICarRentalService_AddCustomer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICarRentalService/AddCustomerADContractFault" name="ADContractFault" message="tns:ICarRentalService_AddCustomer_ADContractFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="DeleteCustomer">
       <wsdl:input wsaw:Action="http://tempuri.org/ICarRentalService/DeleteCustomer" message="tns:ICarRentalService_DeleteCustomer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICarRentalService/DeleteCustomerResponse" message="tns:ICarRentalService_DeleteCustomer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICarRentalService/DeleteCustomerADContractFault" name="ADContractFault" message="tns:ICarRentalService_DeleteCustomer_ADContractFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllReservations">
       <wsdl:input wsaw:Action="http://tempuri.org/ICarRentalService/GetAllReservations" message="tns:ICarRentalService_GetAllReservations_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICarRentalService/GetAllReservationsResponse" message="tns:ICarRentalService_GetAllReservations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICarRentalService/GetAllReservationsNoDataAvaliableFault" name="NoDataAvaliableFault" message="tns:ICarRentalService_GetAllReservations_NoDataAvaliableFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAvaibleCars">
       <wsdl:input wsaw:Action="http://tempuri.org/ICarRentalService/GetAvaibleCars" message="tns:ICarRentalService_GetAvaibleCars_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICarRentalService/GetAvaibleCarsResponse" message="tns:ICarRentalService_GetAvaibleCars_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICarRentalService/GetAvaibleCarsNoDataAvaliableFault" name="NoDataAvaliableFault" message="tns:ICarRentalService_GetAvaibleCars_NoDataAvaliableFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddReservation">
       <wsdl:input wsaw:Action="http://tempuri.org/ICarRentalService/AddReservation" message="tns:ICarRentalService_AddReservation_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICarRentalService/AddReservationResponse" message="tns:ICarRentalService_AddReservation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICarRentalService/AddReservationADContractFault" name="ADContractFault" message="tns:ICarRentalService_AddReservation_ADContractFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="DeleteReservation">
       <wsdl:input wsaw:Action="http://tempuri.org/ICarRentalService/DeleteReservation" message="tns:ICarRentalService_DeleteReservation_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICarRentalService/DeleteReservationResponse" message="tns:ICarRentalService_DeleteReservation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICarRentalService/DeleteReservationADContractFault" name="ADContractFault" message="tns:ICarRentalService_DeleteReservation_ADContractFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="FinishReservation">
       <wsdl:input wsaw:Action="http://tempuri.org/ICarRentalService/FinishReservation" message="tns:ICarRentalService_FinishReservation_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICarRentalService/FinishReservationResponse" message="tns:ICarRentalService_FinishReservation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICarRentalService/FinishReservationADContractFault" name="ADContractFault" message="tns:ICarRentalService_FinishReservation_ADContractFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WSHttpBinding_ICarRentalService" type="tns:ICarRentalService">
@@ -758,6 +1096,10 @@
         <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_GetAllCars_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="NoDataAvaliableFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_GetAllCars_NoDataAvaliableFault_Fault" />
+        <soap12:fault use="literal" name="NoDataAvaliableFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetCarById">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/GetCarById" style="document" />
@@ -769,6 +1111,10 @@
         <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_GetCarById_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="NoDataAvaliableFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_GetCarById_NoDataAvaliableFault_Fault" />
+        <soap12:fault use="literal" name="NoDataAvaliableFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetCarByRegnum">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/GetCarByRegnum" style="document" />
@@ -780,6 +1126,14 @@
         <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_GetCarByRegnum_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="AccessDeniedFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_GetCarByRegnum_AccessDeniedFault_Fault" />
+        <soap12:fault use="literal" name="AccessDeniedFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="NoDataAvaliableFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_GetCarByRegnum_NoDataAvaliableFault_Fault" />
+        <soap12:fault use="literal" name="NoDataAvaliableFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="AddCar">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/AddCar" style="document" />
@@ -791,6 +1145,10 @@
         <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_AddCar_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="NoDataAvaliableFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_AddCar_NoDataAvaliableFault_Fault" />
+        <soap12:fault use="literal" name="NoDataAvaliableFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="DeleteCar">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/DeleteCar" style="document" />
@@ -802,6 +1160,14 @@
         <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_DeleteCar_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="AccessDeniedFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_DeleteCar_AccessDeniedFault_Fault" />
+        <soap12:fault use="literal" name="AccessDeniedFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="NoDataAvaliableFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_DeleteCar_NoDataAvaliableFault_Fault" />
+        <soap12:fault use="literal" name="NoDataAvaliableFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetAllCustomers">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/GetAllCustomers" style="document" />
@@ -813,6 +1179,10 @@
         <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_GetAllCustomers_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="NoDataAvaliableFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_GetAllCustomers_NoDataAvaliableFault_Fault" />
+        <soap12:fault use="literal" name="NoDataAvaliableFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="AddCustomer">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/AddCustomer" style="document" />
@@ -824,6 +1194,10 @@
         <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_AddCustomer_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ADContractFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_AddCustomer_ADContractFault_Fault" />
+        <soap12:fault use="literal" name="ADContractFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="DeleteCustomer">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/DeleteCustomer" style="document" />
@@ -835,6 +1209,10 @@
         <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_DeleteCustomer_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ADContractFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_DeleteCustomer_ADContractFault_Fault" />
+        <soap12:fault use="literal" name="ADContractFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetAllReservations">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/GetAllReservations" style="document" />
@@ -846,6 +1224,10 @@
         <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_GetAllReservations_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="NoDataAvaliableFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_GetAllReservations_NoDataAvaliableFault_Fault" />
+        <soap12:fault use="literal" name="NoDataAvaliableFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetAvaibleCars">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/GetAvaibleCars" style="document" />
@@ -857,6 +1239,10 @@
         <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_GetAvaibleCars_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="NoDataAvaliableFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_GetAvaibleCars_NoDataAvaliableFault_Fault" />
+        <soap12:fault use="literal" name="NoDataAvaliableFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="AddReservation">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/AddReservation" style="document" />
@@ -868,6 +1254,10 @@
         <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_AddReservation_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ADContractFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_AddReservation_ADContractFault_Fault" />
+        <soap12:fault use="literal" name="ADContractFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="DeleteReservation">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/DeleteReservation" style="document" />
@@ -879,6 +1269,10 @@
         <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_DeleteReservation_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ADContractFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_DeleteReservation_ADContractFault_Fault" />
+        <soap12:fault use="literal" name="ADContractFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="FinishReservation">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/FinishReservation" style="document" />
@@ -890,6 +1284,10 @@
         <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_FinishReservation_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ADContractFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICarRentalService_FinishReservation_ADContractFault_Fault" />
+        <soap12:fault use="literal" name="ADContractFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="NetTcpBinding_ICarRentalService" type="tns:ICarRentalService">
@@ -903,6 +1301,9 @@
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="NoDataAvaliableFault">
+        <soap12:fault use="literal" name="NoDataAvaliableFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetCarById">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/GetCarById" style="document" />
@@ -912,6 +1313,9 @@
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="NoDataAvaliableFault">
+        <soap12:fault use="literal" name="NoDataAvaliableFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetCarByRegnum">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/GetCarByRegnum" style="document" />
@@ -921,6 +1325,12 @@
       <wsdl:output name="CarResult">
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="AccessDeniedFault">
+        <soap12:fault use="literal" name="AccessDeniedFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="NoDataAvaliableFault">
+        <soap12:fault use="literal" name="NoDataAvaliableFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="AddCar">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/AddCar" style="document" />
@@ -930,6 +1340,9 @@
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="NoDataAvaliableFault">
+        <soap12:fault use="literal" name="NoDataAvaliableFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="DeleteCar">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/DeleteCar" style="document" />
@@ -939,6 +1352,12 @@
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="AccessDeniedFault">
+        <soap12:fault use="literal" name="AccessDeniedFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="NoDataAvaliableFault">
+        <soap12:fault use="literal" name="NoDataAvaliableFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetAllCustomers">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/GetAllCustomers" style="document" />
@@ -948,6 +1367,9 @@
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="NoDataAvaliableFault">
+        <soap12:fault use="literal" name="NoDataAvaliableFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="AddCustomer">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/AddCustomer" style="document" />
@@ -957,6 +1379,9 @@
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ADContractFault">
+        <soap12:fault use="literal" name="ADContractFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="DeleteCustomer">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/DeleteCustomer" style="document" />
@@ -966,6 +1391,9 @@
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ADContractFault">
+        <soap12:fault use="literal" name="ADContractFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetAllReservations">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/GetAllReservations" style="document" />
@@ -975,6 +1403,9 @@
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="NoDataAvaliableFault">
+        <soap12:fault use="literal" name="NoDataAvaliableFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetAvaibleCars">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/GetAvaibleCars" style="document" />
@@ -984,6 +1415,9 @@
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="NoDataAvaliableFault">
+        <soap12:fault use="literal" name="NoDataAvaliableFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="AddReservation">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/AddReservation" style="document" />
@@ -993,6 +1427,9 @@
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ADContractFault">
+        <soap12:fault use="literal" name="ADContractFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="DeleteReservation">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/DeleteReservation" style="document" />
@@ -1002,6 +1439,9 @@
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ADContractFault">
+        <soap12:fault use="literal" name="ADContractFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="FinishReservation">
       <soap12:operation soapAction="http://tempuri.org/ICarRentalService/FinishReservation" style="document" />
@@ -1011,6 +1451,9 @@
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ADContractFault">
+        <soap12:fault use="literal" name="ADContractFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="CarRentalService">

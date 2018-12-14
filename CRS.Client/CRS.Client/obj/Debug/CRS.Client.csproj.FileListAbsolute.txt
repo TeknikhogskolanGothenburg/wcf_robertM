@@ -8,3 +8,13 @@ C:\Users\z\Documents\code\CRS.Client\CRS.Client\obj\Debug\CRS.Client.csproj.Gene
 C:\Users\z\Documents\code\CRS.Client\CRS.Client\obj\Debug\CRS.Client.csproj.CoreCompileInputs.cache
 C:\Users\z\Documents\code\CRS.Client\CRS.Client\obj\Debug\CRS.Client.exe
 C:\Users\z\Documents\code\CRS.Client\CRS.Client\obj\Debug\CRS.Client.pdb
+C:\Users\z\Documents\code\wcf_rm\wcf_robertM\CRS.Client\CRS.Client\bin\Debug\CRS.Client.exe.config
+C:\Users\z\Documents\code\wcf_rm\wcf_robertM\CRS.Client\CRS.Client\bin\Debug\CRS.Client.exe
+C:\Users\z\Documents\code\wcf_rm\wcf_robertM\CRS.Client\CRS.Client\bin\Debug\CRS.Client.pdb
+C:\Users\z\Documents\code\wcf_rm\wcf_robertM\CRS.Client\CRS.Client\obj\Debug\CRS.Client.csprojAssemblyReference.cache
+C:\Users\z\Documents\code\wcf_rm\wcf_robertM\CRS.Client\CRS.Client\obj\Debug\CRS.Client.MainForm.resources
+C:\Users\z\Documents\code\wcf_rm\wcf_robertM\CRS.Client\CRS.Client\obj\Debug\CRS.Client.Properties.Resources.resources
+C:\Users\z\Documents\code\wcf_rm\wcf_robertM\CRS.Client\CRS.Client\obj\Debug\CRS.Client.csproj.GenerateResource.cache
+C:\Users\z\Documents\code\wcf_rm\wcf_robertM\CRS.Client\CRS.Client\obj\Debug\CRS.Client.csproj.CoreCompileInputs.cache
+C:\Users\z\Documents\code\wcf_rm\wcf_robertM\CRS.Client\CRS.Client\obj\Debug\CRS.Client.exe
+C:\Users\z\Documents\code\wcf_rm\wcf_robertM\CRS.Client\CRS.Client\obj\Debug\CRS.Client.pdb

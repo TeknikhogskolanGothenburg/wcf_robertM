@@ -16,6 +16,7 @@ namespace Service
 		static private CarMethods _carMethods = new CarMethods();
 		static private CustomerMethods _customerMethods = new CustomerMethods();
 		static private ReservationMethods _reservationMethods = new ReservationMethods();
+		static private Context.Context _context = new Context.Context();
 
 		#region Car Methods
 		public List<Car> GetAllCars()
@@ -30,15 +31,7 @@ namespace Service
 
 		public CarResult GetCarByRegnum(CarRequest request)
 		{
-			if(request.LicenseKey != "yggdrasil")
-			{
-				throw new WebFaultException<string>(
-					"Wrong license key", HttpStatusCode.Forbidden);
-			}
-			else
-			{
-				return _carMethods.GetCarByRegnum(request.Regnumber);
-			}
+			return _carMethods.GetCarByRegnum(request);
 		}
 
 		public bool AddCar(Car car)

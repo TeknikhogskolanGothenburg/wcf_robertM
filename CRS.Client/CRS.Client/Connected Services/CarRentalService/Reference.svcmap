@@ -23,10 +23,13 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="CarRentalService.wsdl" MetadataType="Wsdl" ID="2fdc35a9-d4e5-4b07-afbe-a596fea7eda0" SourceId="1" SourceUrl="http://localhost:4040/?wsdl" />
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="f2328476-b875-49b2-9996-e2214e55630c" SourceId="1" SourceUrl="http://localhost:4040/?xsd=xsd1" />
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="60c2c73d-611a-451f-a73f-5dceb7443e08" SourceId="1" SourceUrl="http://localhost:4040/?disco" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="39032cf8-d7da-4d3b-a0c4-77232f45e3cf" SourceId="1" SourceUrl="http://localhost:4040/?xsd=xsd2" />
     <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="a34e3fc2-5bc5-45f8-89ff-c8535aef0b66" SourceId="1" SourceUrl="http://localhost:4040/?xsd=xsd3" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="60c2c73d-611a-451f-a73f-5dceb7443e08" SourceId="1" SourceUrl="http://localhost:4040/?disco" />
+    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="eb20ddd6-247e-49e5-ac2f-72b393b6b0e5" SourceId="1" SourceUrl="http://localhost:4040/?xsd=xsd4" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="39032cf8-d7da-4d3b-a0c4-77232f45e3cf" SourceId="1" SourceUrl="http://localhost:4040/?xsd=xsd2" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="f2328476-b875-49b2-9996-e2214e55630c" SourceId="1" SourceUrl="http://localhost:4040/?xsd=xsd1" />
+    <MetadataFile FileName="item41.xsd" MetadataType="Schema" ID="09471589-3652-45bc-9145-4b8fc92ab58e" SourceId="1" SourceUrl="http://localhost:4040/?xsd=xsd5" />
+    <MetadataFile FileName="item42.xsd" MetadataType="Schema" ID="9270ea3b-8568-45b8-b450-0b8b04dd1c9c" SourceId="1" SourceUrl="http://localhost:4040/?xsd=xsd6" />
     <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="f1c5e755-ea48-4b5f-9dec-e5aa65bcd79b" SourceId="1" SourceUrl="http://localhost:4040/?xsd=xsd0" />
   </Metadata>
   <Extensions>

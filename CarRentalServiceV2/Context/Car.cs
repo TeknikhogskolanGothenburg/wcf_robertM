@@ -25,7 +25,7 @@ namespace Context
 	#region Message Contracts
 	[MessageContract(IsWrapped = true,
 		WrapperName = "CarInfoObject",
-		WrapperNamespace = "http://audhumbla.xyz/Car")]
+		WrapperNamespace="http://audhumbla.xyz/DataContracts/Car")]
 	public class CarResult
 	{
 		public CarResult() { }
@@ -38,26 +38,26 @@ namespace Context
 			this.Regnumber = car.Regnumber;
 		}
 
-		[MessageBodyMember(Order = 1, Namespace = "http://audhumbla.xyz/Car")]
+		[MessageBodyMember(Order = 1, Namespace="http://audhumbla.xyz/DataContracts/Car")]
 		public int Id { get; set; }
-		[MessageBodyMember(Order = 2, Namespace = "http://audhumbla.xyz/Car")]
+		[MessageBodyMember(Order = 2, Namespace="http://audhumbla.xyz/DataContracts/Car")]
 		public string Brand { get; set; }
-		[MessageBodyMember(Order = 3, Namespace = "http://audhumbla.xyz/Car")]
+		[MessageBodyMember(Order = 3, Namespace="http://audhumbla.xyz/DataContracts/Car")]
 		public string Model { get; set; }
-		[MessageBodyMember(Order = 4, Namespace = "http://audhumbla.xyz/Car")]
+		[MessageBodyMember(Order = 4, Namespace="http://audhumbla.xyz/DataContracts/Car")]
 		public int Year { get; set; }
-		[MessageBodyMember(Order = 5, Namespace = "http://audhumbla.xyz/Car")]
+		[MessageBodyMember(Order = 5, Namespace="http://audhumbla.xyz/DataContracts/Car")]
 		public string Regnumber { get; set; }
 	}
 
 	[MessageContract(IsWrapped = true,
 		WrapperName = "CarRequestObject",
-		WrapperNamespace = "http://audhumbla.xyz/Car")]
+		WrapperNamespace="http://audhumbla.xyz/DataContracts/Car")]
 	public class CarRequest
 	{
-		[MessageBodyMember(Order = 1, Namespace = "http://audhumbla.xyz/Car")]
+		[MessageBodyMember(Order = 1, Namespace="http://audhumbla.xyz/DataContracts/Car")]
 		public string LicenseKey { get; set; }
-		[MessageBodyMember(Order = 2, Namespace = "http://audhumbla.xyz/Car")]
+		[MessageBodyMember(Order = 2, Namespace="http://audhumbla.xyz/DataContracts/Car")]
 		public string Regnumber { get; set; }
 	}
 	#endregion

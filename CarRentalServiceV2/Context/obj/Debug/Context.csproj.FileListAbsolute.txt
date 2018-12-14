@@ -24,4 +24,3 @@ C:\Users\z\Documents\code\CarRentalServiceV2\Context\obj\Debug\Context.csproj.Co
 C:\Users\z\Documents\code\CarRentalServiceV2\Context\obj\Debug\Context.csproj.CopyComplete
 C:\Users\z\Documents\code\CarRentalServiceV2\Context\obj\Debug\Context.dll
 C:\Users\z\Documents\code\CarRentalServiceV2\Context\obj\Debug\Context.pdb
-C:\Users\z\Documents\code\CarRentalServiceV2\Context\obj\Debug\Context.csprojAssemblyReference.cache

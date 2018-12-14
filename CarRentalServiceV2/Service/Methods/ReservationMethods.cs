@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using Context;
@@ -20,7 +21,11 @@ namespace Service
 			}
 			catch (Exception)
 			{
-				return false;
+				var ex = new ADContract
+				{
+					Info = "Couldn't add reservation"
+				};
+				throw new FaultException<ADContract>(ex);
 			}
 			return true;
 		}
@@ -34,14 +39,27 @@ namespace Service
 			}
 			catch (Exception)
 			{
-				return false;
+				var ex = new ADContract
+				{
+					Info = "Couldn't delete reservation"
+				};
+				throw new FaultException<ADContract>(ex);
 			}
 			return true;
 		}
 
 		public List<Reservation> GetAllReservations()
 		{
-			return _context.Reservations.ToList();
+			var reservations = _context.Reservations.ToList();
+			if (reservations.Count <= 0)
+			{
+				var ex = new NoDataAvaliable
+				{
+					Info = "No customers in the database"
+				};
+				throw new FaultException<NoDataAvaliable>(ex);
+			}
+			return reservations;
 		}
 
 		public List<Car> GetAvaibleCars(DateTime start, DateTime end)
@@ -79,7 +97,11 @@ namespace Service
 			}
 			catch (Exception)
 			{
-				return false;
+				var ex = new ADContract
+				{
+					Info = "Couldn't finish reservation"
+				};
+				throw new FaultException<ADContract>(ex);
 			}
 			return true;
 		}

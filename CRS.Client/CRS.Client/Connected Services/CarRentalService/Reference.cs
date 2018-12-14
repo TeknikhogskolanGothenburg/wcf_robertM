@@ -124,6 +124,96 @@ namespace CRS.Client.CarRentalService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NoDataAvaliable", Namespace="http://audhumbla.xyz/FaultContracts/NoDataAvaliable")]
+    [System.SerializableAttribute()]
+    public partial class NoDataAvaliable : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string InfoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Info {
+            get {
+                return this.InfoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InfoField, value) != true)) {
+                    this.InfoField = value;
+                    this.RaisePropertyChanged("Info");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AccessDenied", Namespace="http://audhumbla.xyz/FaultContracts/AccessDenied")]
+    [System.SerializableAttribute()]
+    public partial class AccessDenied : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string InfoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Info {
+            get {
+                return this.InfoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InfoField, value) != true)) {
+                    this.InfoField = value;
+                    this.RaisePropertyChanged("Info");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Customer", Namespace="http://schemas.datacontract.org/2004/07/Context")]
     [System.SerializableAttribute()]
     public partial class Customer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -404,23 +494,72 @@ namespace CRS.Client.CarRentalService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ADContract", Namespace="http://audhumbla.xyz/FaultContracts/ADContract")]
+    [System.SerializableAttribute()]
+    public partial class ADContract : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string InfoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Info {
+            get {
+                return this.InfoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InfoField, value) != true)) {
+                    this.InfoField = value;
+                    this.RaisePropertyChanged("Info");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CarRentalService.ICarRentalService")]
     public interface ICarRentalService {
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/GetAllCars", ReplyAction="http://tempuri.org/ICarRentalService/GetAllCarsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CRS.Client.CarRentalService.NoDataAvaliable), Action="http://tempuri.org/ICarRentalService/GetAllCarsNoDataAvaliableFault", ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Name="NoDataAvaliable", Namespace="http://audhumbla.xyz/FaultContracts/NoDataAvaliable")]
         CRS.Client.CarRentalService.Car[] GetAllCars();
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/GetAllCars", ReplyAction="http://tempuri.org/ICarRentalService/GetAllCarsResponse")]
         System.Threading.Tasks.Task<CRS.Client.CarRentalService.Car[]> GetAllCarsAsync();
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/GetCarById", ReplyAction="http://tempuri.org/ICarRentalService/GetCarByIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CRS.Client.CarRentalService.NoDataAvaliable), Action="http://tempuri.org/ICarRentalService/GetCarByIdNoDataAvaliableFault", ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Name="NoDataAvaliable", Namespace="http://audhumbla.xyz/FaultContracts/NoDataAvaliable")]
         CRS.Client.CarRentalService.Car GetCarById(int id);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/GetCarById", ReplyAction="http://tempuri.org/ICarRentalService/GetCarByIdResponse")]
         System.Threading.Tasks.Task<CRS.Client.CarRentalService.Car> GetCarByIdAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/GetCarByRegnum", ReplyAction="http://tempuri.org/ICarRentalService/GetCarByRegnumResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CRS.Client.CarRentalService.AccessDenied), Action="http://tempuri.org/ICarRentalService/GetCarByRegnumAccessDeniedFault", ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Name="AccessDenied", Namespace="http://audhumbla.xyz/FaultContracts/AccessDenied")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CRS.Client.CarRentalService.NoDataAvaliable), Action="http://tempuri.org/ICarRentalService/GetCarByRegnumNoDataAvaliableFault", ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Name="NoDataAvaliable", Namespace="http://audhumbla.xyz/FaultContracts/NoDataAvaliable")]
         CRS.Client.CarRentalService.CarResult GetCarByRegnum(CRS.Client.CarRentalService.CarRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
@@ -428,60 +567,71 @@ namespace CRS.Client.CarRentalService {
         System.Threading.Tasks.Task<CRS.Client.CarRentalService.CarResult> GetCarByRegnumAsync(CRS.Client.CarRentalService.CarRequest request);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.None, Action="http://tempuri.org/ICarRentalService/AddCar", ReplyAction="http://tempuri.org/ICarRentalService/AddCarResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CRS.Client.CarRentalService.NoDataAvaliable), Action="http://tempuri.org/ICarRentalService/AddCarNoDataAvaliableFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="NoDataAvaliable", Namespace="http://audhumbla.xyz/FaultContracts/NoDataAvaliable")]
         bool AddCar(CRS.Client.CarRentalService.Car car);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.None, Action="http://tempuri.org/ICarRentalService/AddCar", ReplyAction="http://tempuri.org/ICarRentalService/AddCarResponse")]
         System.Threading.Tasks.Task<bool> AddCarAsync(CRS.Client.CarRentalService.Car car);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.Sign, Action="http://tempuri.org/ICarRentalService/DeleteCar", ReplyAction="http://tempuri.org/ICarRentalService/DeleteCarResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CRS.Client.CarRentalService.AccessDenied), Action="http://tempuri.org/ICarRentalService/DeleteCarAccessDeniedFault", ProtectionLevel=System.Net.Security.ProtectionLevel.Sign, Name="AccessDenied", Namespace="http://audhumbla.xyz/FaultContracts/AccessDenied")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CRS.Client.CarRentalService.NoDataAvaliable), Action="http://tempuri.org/ICarRentalService/DeleteCarNoDataAvaliableFault", ProtectionLevel=System.Net.Security.ProtectionLevel.Sign, Name="NoDataAvaliable", Namespace="http://audhumbla.xyz/FaultContracts/NoDataAvaliable")]
         bool DeleteCar(CRS.Client.CarRentalService.Car car);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.Sign, Action="http://tempuri.org/ICarRentalService/DeleteCar", ReplyAction="http://tempuri.org/ICarRentalService/DeleteCarResponse")]
         System.Threading.Tasks.Task<bool> DeleteCarAsync(CRS.Client.CarRentalService.Car car);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/GetAllCustomers", ReplyAction="http://tempuri.org/ICarRentalService/GetAllCustomersResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CRS.Client.CarRentalService.NoDataAvaliable), Action="http://tempuri.org/ICarRentalService/GetAllCustomersNoDataAvaliableFault", ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Name="NoDataAvaliable", Namespace="http://audhumbla.xyz/FaultContracts/NoDataAvaliable")]
         CRS.Client.CarRentalService.Customer[] GetAllCustomers();
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/GetAllCustomers", ReplyAction="http://tempuri.org/ICarRentalService/GetAllCustomersResponse")]
         System.Threading.Tasks.Task<CRS.Client.CarRentalService.Customer[]> GetAllCustomersAsync();
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/AddCustomer", ReplyAction="http://tempuri.org/ICarRentalService/AddCustomerResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CRS.Client.CarRentalService.ADContract), Action="http://tempuri.org/ICarRentalService/AddCustomerADContractFault", ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Name="ADContract", Namespace="http://audhumbla.xyz/FaultContracts/ADContract")]
         bool AddCustomer(CRS.Client.CarRentalService.Customer customer);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/AddCustomer", ReplyAction="http://tempuri.org/ICarRentalService/AddCustomerResponse")]
         System.Threading.Tasks.Task<bool> AddCustomerAsync(CRS.Client.CarRentalService.Customer customer);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/DeleteCustomer", ReplyAction="http://tempuri.org/ICarRentalService/DeleteCustomerResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CRS.Client.CarRentalService.ADContract), Action="http://tempuri.org/ICarRentalService/DeleteCustomerADContractFault", ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Name="ADContract", Namespace="http://audhumbla.xyz/FaultContracts/ADContract")]
         bool DeleteCustomer(CRS.Client.CarRentalService.Customer customer);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/DeleteCustomer", ReplyAction="http://tempuri.org/ICarRentalService/DeleteCustomerResponse")]
         System.Threading.Tasks.Task<bool> DeleteCustomerAsync(CRS.Client.CarRentalService.Customer customer);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/GetAllReservations", ReplyAction="http://tempuri.org/ICarRentalService/GetAllReservationsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CRS.Client.CarRentalService.NoDataAvaliable), Action="http://tempuri.org/ICarRentalService/GetAllReservationsNoDataAvaliableFault", ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Name="NoDataAvaliable", Namespace="http://audhumbla.xyz/FaultContracts/NoDataAvaliable")]
         CRS.Client.CarRentalService.Reservation[] GetAllReservations();
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/GetAllReservations", ReplyAction="http://tempuri.org/ICarRentalService/GetAllReservationsResponse")]
         System.Threading.Tasks.Task<CRS.Client.CarRentalService.Reservation[]> GetAllReservationsAsync();
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/GetAvaibleCars", ReplyAction="http://tempuri.org/ICarRentalService/GetAvaibleCarsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CRS.Client.CarRentalService.NoDataAvaliable), Action="http://tempuri.org/ICarRentalService/GetAvaibleCarsNoDataAvaliableFault", ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Name="NoDataAvaliable", Namespace="http://audhumbla.xyz/FaultContracts/NoDataAvaliable")]
         CRS.Client.CarRentalService.Car[] GetAvaibleCars(System.DateTime start, System.DateTime end);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/GetAvaibleCars", ReplyAction="http://tempuri.org/ICarRentalService/GetAvaibleCarsResponse")]
         System.Threading.Tasks.Task<CRS.Client.CarRentalService.Car[]> GetAvaibleCarsAsync(System.DateTime start, System.DateTime end);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/AddReservation", ReplyAction="http://tempuri.org/ICarRentalService/AddReservationResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CRS.Client.CarRentalService.ADContract), Action="http://tempuri.org/ICarRentalService/AddReservationADContractFault", ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Name="ADContract", Namespace="http://audhumbla.xyz/FaultContracts/ADContract")]
         bool AddReservation(CRS.Client.CarRentalService.Reservation reservation);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/AddReservation", ReplyAction="http://tempuri.org/ICarRentalService/AddReservationResponse")]
         System.Threading.Tasks.Task<bool> AddReservationAsync(CRS.Client.CarRentalService.Reservation reservation);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/DeleteReservation", ReplyAction="http://tempuri.org/ICarRentalService/DeleteReservationResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CRS.Client.CarRentalService.ADContract), Action="http://tempuri.org/ICarRentalService/DeleteReservationADContractFault", ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Name="ADContract", Namespace="http://audhumbla.xyz/FaultContracts/ADContract")]
         bool DeleteReservation(CRS.Client.CarRentalService.Reservation reservation);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/DeleteReservation", ReplyAction="http://tempuri.org/ICarRentalService/DeleteReservationResponse")]
         System.Threading.Tasks.Task<bool> DeleteReservationAsync(CRS.Client.CarRentalService.Reservation reservation);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/FinishReservation", ReplyAction="http://tempuri.org/ICarRentalService/FinishReservationResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CRS.Client.CarRentalService.ADContract), Action="http://tempuri.org/ICarRentalService/FinishReservationADContractFault", ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Name="ADContract", Namespace="http://audhumbla.xyz/FaultContracts/ADContract")]
         bool FinishReservation(CRS.Client.CarRentalService.Reservation reservation);
         
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ICarRentalService/FinishReservation", ReplyAction="http://tempuri.org/ICarRentalService/FinishReservationResponse")]
@@ -490,13 +640,13 @@ namespace CRS.Client.CarRentalService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CarRequestObject", WrapperNamespace="http://audhumbla.xyz/Car", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CarRequestObject", WrapperNamespace="http://audhumbla.xyz/DataContracts/Car", IsWrapped=true)]
     public partial class CarRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://audhumbla.xyz/Car", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://audhumbla.xyz/DataContracts/Car", Order=0)]
         public string LicenseKey;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://audhumbla.xyz/Car", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://audhumbla.xyz/DataContracts/Car", Order=1)]
         public string Regnumber;
         
         public CarRequest() {
@@ -510,22 +660,22 @@ namespace CRS.Client.CarRentalService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CarInfoObject", WrapperNamespace="http://audhumbla.xyz/Car", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CarInfoObject", WrapperNamespace="http://audhumbla.xyz/DataContracts/Car", IsWrapped=true)]
     public partial class CarResult {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://audhumbla.xyz/Car", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://audhumbla.xyz/DataContracts/Car", Order=0)]
         public int Id;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://audhumbla.xyz/Car", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://audhumbla.xyz/DataContracts/Car", Order=1)]
         public string Brand;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://audhumbla.xyz/Car", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://audhumbla.xyz/DataContracts/Car", Order=2)]
         public string Model;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://audhumbla.xyz/Car", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://audhumbla.xyz/DataContracts/Car", Order=3)]
         public int Year;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://audhumbla.xyz/Car", Order=4)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://audhumbla.xyz/DataContracts/Car", Order=4)]
         public string Regnumber;
         
         public CarResult() {

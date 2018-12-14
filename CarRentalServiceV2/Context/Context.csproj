@@ -55,11 +55,14 @@
     <Compile Include="Car.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="FaultContracts\ADContract.cs" />
     <Compile Include="Migrations\201811291506461_Init.cs" />
     <Compile Include="Migrations\201811291506461_Init.Designer.cs">
       <DependentUpon>201811291506461_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="FaultContracts\AccessDenied.cs" />
+    <Compile Include="FaultContracts\NoDataAvaliable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservation.cs" />
   </ItemGroup>

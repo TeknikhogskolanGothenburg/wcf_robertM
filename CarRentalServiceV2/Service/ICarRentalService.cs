@@ -13,52 +13,62 @@ namespace Service
 	{
 		#region Car Methods
 		[OperationContract]
+		[FaultContract(typeof(NoDataAvaliable))]
 		List<Car> GetAllCars();
 
 		[OperationContract]
+		[FaultContract(typeof(NoDataAvaliable))]
 		Car GetCarById(int id);
 
 		[OperationContract(ProtectionLevel = ProtectionLevel.EncryptAndSign)]
+		[FaultContract(typeof(AccessDenied))]
+		[FaultContract(typeof(NoDataAvaliable))]
 		CarResult GetCarByRegnum(CarRequest request);
 
 		[OperationContract(ProtectionLevel = ProtectionLevel.None)]
+		[FaultContract(typeof(NoDataAvaliable))]
 		bool AddCar(Car car);
 
 		[OperationContract(ProtectionLevel = ProtectionLevel.Sign)]
+		[FaultContract(typeof(AccessDenied))]
+		[FaultContract(typeof(NoDataAvaliable))]
 		bool DeleteCar(Car car);
 
 		#endregion
 
 		#region Customer Methods
 		[OperationContract]
+		[FaultContract(typeof(NoDataAvaliable))]
 		List<Customer> GetAllCustomers();
 
-		//[OperationContract(ProtectionLevel = ProtectionLevel.Sign)]
 		[OperationContract]
+		[FaultContract(typeof(ADContract))]
 		bool AddCustomer(Customer customer);
 
-		//[OperationContract(ProtectionLevel = ProtectionLevel.Sign)]
 		[OperationContract]
+		[FaultContract(typeof(ADContract))]
 		bool DeleteCustomer(Customer customer);
 		#endregion
 
 		#region Reservation Methods
 		[OperationContract]
+		[FaultContract(typeof(NoDataAvaliable))]
 		List<Reservation> GetAllReservations();
 
 		[OperationContract]
+		[FaultContract(typeof(NoDataAvaliable))]
 		List<Car> GetAvaibleCars(DateTime start, DateTime end);
 
-		//[OperationContract(ProtectionLevel = ProtectionLevel.None)]
 		[OperationContract]
+		[FaultContract(typeof(ADContract))]
 		bool AddReservation(Reservation reservation);
 
-		//[OperationContract(ProtectionLevel = ProtectionLevel.EncryptAndSign)]
 		[OperationContract]
+		[FaultContract(typeof(ADContract))]
 		bool DeleteReservation(Reservation reservation);
 
-		//[OperationContract(ProtectionLevel = ProtectionLevel.EncryptAndSign)]
 		[OperationContract]
+		[FaultContract(typeof(ADContract))]
 		bool FinishReservation(Reservation reservation);
 		#endregion
 	}

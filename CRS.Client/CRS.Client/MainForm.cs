@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ServiceModel;
 using System.Windows.Forms;
 using CRS.Client.CarRentalService;
 
@@ -76,30 +77,21 @@ namespace CRS.Client
 					request.Regnumber = regnumber;
 
 					var car = client.GetCarByRegnum(request);
-					if (car != null)
-					{
-						lblBrand2.Text = car.Brand;
-						lblModel2.Text = car.Model;
-						lblRegnumber2.Text = car.Regnumber;
-						lblYear2.Text = car.Year.ToString();
-						errorMsg2.Text = string.Empty;
-					}
-					else
-					{
-						SetItToNaN2();
-						errorMsg2.Text = "No car found!";
-					}
+
+					lblBrand2.Text = car.Brand;
+					lblModel2.Text = car.Model;
+					lblRegnumber2.Text = car.Regnumber;
+					lblYear2.Text = car.Year.ToString();
+					errorMsg2.Text = string.Empty;
 				}
-				catch (Exception ex)
+				catch(FaultException<AccessDenied> ex)
 				{
-					if(ex.Message == "Forbidden")
-					{
-						errorMsg2.Text = "Validation error, check password and try again";
-					}
-					else
-					{
-						errorMsg2.Text = "Couldn't find that car";
-					}
+					errorMsg2.Text = ex.Detail.Info;
+					SetItToNaN2();
+				}
+				catch (FaultException<NoDataAvaliable> ex)
+				{
+					errorMsg2.Text = ex.Detail.Info;
 					SetItToNaN2();
 				}
 			}
